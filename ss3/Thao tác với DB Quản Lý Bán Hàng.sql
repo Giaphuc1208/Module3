@@ -50,4 +50,4 @@ SELECT o.o_id, o.o_date, SUM(od.od_qty * p.p_price) AS total_price
 FROM `order` o
 JOIN order_detail od ON o.o_id = od.o_id
 JOIN product p ON od.p_id = p.p_id
-GROUP BY o.o_id, o.o_date;
+GROUP BY o.o_id;
