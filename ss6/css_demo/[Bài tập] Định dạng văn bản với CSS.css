@@ -1,0 +1,28 @@
+body{
+    font-family: Arial, serif;
+    width: 800px;
+}
+h1{
+    border-bottom: 1px solid black;
+    padding: 5px 0;
+    font-size: 300%;
+    margin: 0;
+}
+.open{
+    margin: 0;
+    padding: 10px 0;
+    text-indent: 50px;
+}
+.body{
+    text-indent: 50px;
+}
+.end{
+    text-indent: 50px;
+}
+.weight{
+    font-weight: bold;
+}
+.change{
+    color: blue;
+    cursor: wait;
+}
