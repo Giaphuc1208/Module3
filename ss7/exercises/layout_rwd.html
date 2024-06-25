@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            font-family: Tahoma;
+        }
+        @media only screen and (min-width: 768px) {
+            .col-1 {width: 8.33%;}
+            .col-2 {width: 16.66%;}
+            .col-3 {width: 25%;}
+            .col-4 {width: 33.33%;}
+            .col-5 {width: 41.66%;}
+            .col-6 {width: 50%;}
+            .col-7 {width: 58.33%;}
+            .col-8 {width: 66.66%;}
+            .col-9 {width: 75%;}
+            .col-10 {width: 83.33%;}
+            .col-11 {width: 91.66%;}
+            .col-12 {width: 100%;}
+        }
+        [class*="col-"] {
+            float: left;
+            padding: 5px;
+        }
+        .row::after {
+            clear: both;
+            content: "";
+            display: block;
+        }
+        .menu {
+            height: 50px;
+            word-spacing: 15px;
+            background-color: darkslategrey;
+            color: whitesmoke;
+            font-size: 20px;
+        }
+        .login {
+            width: 50px;
+            height: 30px;
+        }
+        .left-content {
+            color: blue;
+            text-align: center;
+            background-color: whitesmoke;
+            height: 500px;
+        }
+        .content {
+            background-color: white;
+            height: 500px;
+        }
+        .right-content {
+            text-align: center;
+            background-color: whitesmoke;
+            height: 500px;
+        }
+        .border {
+            border: solid 1px ;
+            padding: 40px 10px;
+            margin: 10px 100px;
+            /*margin-left: 100px;*/
+            /*margin-right: 100px;*/
+        }
+        .footer {
+            text-align: center;
+            background-color: darkslategrey;
+            color: whitesmoke;
+            height: 50px;
+            padding: 10px 0px;
+        }
+        #menu ul, #menu li{
+            padding: 0;
+            margin: 0;
+        }
+        #menu li {
+            position: relative;
+            float: left;
+            list-style: none;
+            margin:0 ;
+            padding: 0;
+        }
+        #menu li a{
+            width: 100px;
+            height: 30px;
+            display: block;
+            text-decoration: none;
+            text-align: center;
+            line-height: 30px;
+            color: white;
+            margin-top: 5px;
+            margin-left: -12px;
+        }
+        #menu ul ul li a{
+            width: 200px;
+            text-align: left;
+            padding-left: 10px;
+        }
+        #menu li a:hover{
+            background-color: black;
+            color: white;
+
+        }
+        #menu ul ul{
+            position: absolute;
+            top: 30px;
+            left: 15px;
+            visibility: hidden;
+        }
+        #menu ul li:hover ul{
+            visibility: visible;
+        }
+    </style>
+</head>
+<body>
+<div class="row">
+    <div class="col-10 menu">
+        <div id="menu">
+            <ul>
+                <li><a href="#">Logo</a>
+                    <ul>
+                        <li><a href="#">Computing Fundametal</a></li>
+                        <li><a href="#">C Programming</a></li>
+                        <li><a href="#">Building Dynamic Website</a></li>
+                        <li><a href="#">MS Transact-SQL</a></li>
+                        <li><a href="#">Project</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Home </a>
+                    <ul>
+                        <li><a href="#">Cloud Computing</a></li>
+                        <li><a href="#">APJ - I</a></li>
+                        <li><a href="#">APJ - II</a></li>
+                        <li><a href="#">APJ - III</a></li>
+                        <li><a href="#">eProject</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Projects</a></li>
+                <li><a href="#">Contact</a></li>
+
+            </ul>
+        </div>
+    </div>
+    <div class="col-2 menu">
+        <img class= "login" src="https://image.freepik.com/free-icon/login-symbol_318-9896.jpg"/>
+        <span>Login</span>
+    </div>
+</div>
+<div class="row">
+    <div class="col-2 left-content">
+        <p>Link</p>
+        <p>Link</p>
+        <p>Link</p>
+    </div>
+    <div class="col-6 content">
+        <h1>Welcome</h1>
+        <div>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do elusmod tempor incididunt ut labore et dolore magna aliqua.
+            <hr>
+        </div>
+        <h2>Test</h2>
+        <span>Lorem ipsum...</span>
+    </div>
+    <div class="col-4 right-content">
+        <p class="border">ADS</p>
+        <p class="border">ADS</p>
+    </div>
+    <div class="row footer">
+        <div class="col-12 footer">
+            <span>Footer Text</span>
+        </div>
+    </div>
+</div>
+</body>
+</html>
