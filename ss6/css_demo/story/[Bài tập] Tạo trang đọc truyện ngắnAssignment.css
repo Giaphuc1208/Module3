@@ -1,0 +1,21 @@
+h1{
+    font-size:60px;
+    font-family:Gigi;
+    color: brown;
+}
+.page-wrapper{
+    text-align: center;
+}
+body{
+    background: azure;
+}
+#menu{
+    text-align: left;
+}
+#main{
+    width: 900px;
+    height: 1000px;
+}
+li{
+    list-style:  none
+}
