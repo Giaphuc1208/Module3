@@ -1,4 +1,4 @@
-package org.example.application_calculator;
+package org.example.calculator;
 
 import java.io.*;
 import javax.servlet.http.*;
