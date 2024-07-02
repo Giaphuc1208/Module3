@@ -16,7 +16,7 @@ public class StudentService implements IStudentService {
 
     @Override
     public void save(Student student) {
-
+        student.setId(student.getS);
     }
 
     @Override
