@@ -1,11 +1,12 @@
 package org.example.demo.service;
 
 import org.example.demo.models.User;
+import org.example.demo.models.dto.UserDTO;
 
 import java.util.List;
 
 public interface IUserService {
-    List<User> selectAllUsers();
+    List<UserDTO> selectAllUsers();
 
 
 
@@ -15,9 +16,9 @@ public interface IUserService {
 
     void updateUser(User user);
 
-    User findUser(int id);
+    UserDTO findUser(int id);
 
-    List<User> searchByName(String keyword);
+    List<UserDTO> searchByName(String keyword);
 
-    List<User> sortByName();
+    List<UserDTO> sortByName();
 }

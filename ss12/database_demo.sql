@@ -1,12 +1,21 @@
 create database demo;
 use demo;
+-- drop database demo;
+create table hobbies(
+id int primary key auto_increment,
+name varchar(255)); 
 
 create table users(
 id int primary key auto_increment,
-name varchar(50),
-email varchar(20),
-country varchar(20));
+name varchar(255),
+email varchar(255),
+country varchar(255),
+id_hb int,
+foreign key (id_hb) references hobbies(id));
 
-insert into users(name, email, country) values
-("Ronaldo","ronaldo@codegym.com","poturgal"),
-("Messi","messi@codegym.com","argentina");
+
+
+select users.id,users.name,users.email,users.country,hobbies.name as hobby
+from users 
+join hobbies
+ on hobbies.id = users.id_hb;

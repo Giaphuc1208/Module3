@@ -34,6 +34,7 @@
             <td>Tên</td>
             <td>Email</td>
             <td>Quê quán</td>
+            <td>Sở thích</td>
             <td></td>
         </tr>
       <c:forEach var="user" items="${users}" varStatus="status" >
@@ -42,6 +43,7 @@
             <td>${user.name}</td>
             <td>${user.email}</td>
             <td>${user.country}</td>
+            <td>${user.hobby}</td>
             <td>
                 <a href="/users/update?id=${user.id}" class="btn btn-sm btn-outline-primary">Sửa</a>
                 <a href="/users/delete?id=${user.id}" class="btn btn-sm btn-outline-danger">Xóa</a>

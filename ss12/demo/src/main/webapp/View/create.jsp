@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%--
   Created by IntelliJ IDEA.
   User: ADMIN
@@ -27,6 +28,13 @@
         </div>
         <div class="input-group input-group-sm mb-3 w-25">
             <input type="text" class="form-control" placeholder="nhập quê quán" name="country">
+        </div>
+        <div class="">
+            <select name="idHobby" id="idHobby">
+                <c:forEach var="hobby" items="${hobbies}">
+                <option value="${hobby.id}">${hobby.name}</option>
+                </c:forEach>
+            </select>
         </div>
         <button class="btn btn-success">Thêm</button>
 

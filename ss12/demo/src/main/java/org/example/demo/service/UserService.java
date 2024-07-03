@@ -1,6 +1,7 @@
 package org.example.demo.service;
 
 import org.example.demo.models.User;
+import org.example.demo.models.dto.UserDTO;
 import org.example.demo.repo.IUserRepo;
 import org.example.demo.repo.UserRepo;
 
@@ -10,7 +11,7 @@ import java.util.List;
 public class UserService implements IUserService{
     IUserRepo userRepo = new UserRepo();
     @Override
-    public List<User> selectAllUsers() {
+    public List<UserDTO> selectAllUsers() {
         try {
             return userRepo.selectAll();
         } catch (SQLException e) {
@@ -29,11 +30,7 @@ public class UserService implements IUserService{
 
     @Override
     public void deleteUser(int id) {
-        try {
             userRepo.deleteUser(id);
-        } catch (SQLException e) {
-            throw new RuntimeException(e);
-        }
     }
 
     @Override
@@ -46,7 +43,7 @@ public class UserService implements IUserService{
     }
 
     @Override
-    public User findUser(int id) {
+    public UserDTO findUser(int id) {
         try {
             return  userRepo.findUser(id);
         } catch (SQLException e) {
@@ -55,7 +52,7 @@ public class UserService implements IUserService{
     }
 
     @Override
-    public List<User> searchByName(String keyword) {
+    public List<UserDTO> searchByName(String keyword) {
         try {
             return userRepo.searchByName(keyword);
         } catch (SQLException e) {
@@ -64,7 +61,7 @@ public class UserService implements IUserService{
     }
 
     @Override
-    public List<User> sortByName() {
+    public List<UserDTO> sortByName() {
         try {
             return userRepo.sortByName();
         } catch (SQLException e) {
