@@ -22,6 +22,10 @@
             <button>Tìm</button>
         </form>
         <a href="/users/create" class="btn btn-sm btn-outline-warning">Thêm mới</a>
+        <form action="/users/sort">
+            <button>Sắp xếp</button>
+        </form>
+
 
     </div>
     <table class="table table-hover">

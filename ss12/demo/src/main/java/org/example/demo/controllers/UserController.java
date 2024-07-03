@@ -43,8 +43,10 @@ public class UserController extends HttpServlet {
         }
     }
 
-    private void sortByName(HttpServletRequest req, HttpServletResponse resp) {
-        
+    private void sortByName(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        List<User> users = userService.sortByName();
+        req.setAttribute("users",users);
+        req.getRequestDispatcher("/View/list.jsp").forward(req,resp);
     }
 
     private void searchByName(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {

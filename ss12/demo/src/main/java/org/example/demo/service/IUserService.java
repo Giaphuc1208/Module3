@@ -18,4 +18,6 @@ public interface IUserService {
     User findUser(int id);
 
     List<User> searchByName(String keyword);
+
+    List<User> sortByName();
 }

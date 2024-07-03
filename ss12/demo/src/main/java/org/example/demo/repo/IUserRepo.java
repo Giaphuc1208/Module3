@@ -17,4 +17,6 @@ public interface IUserRepo {
     void updateUser(User user) throws SQLException;
 
     List<User> searchByName(String keyword) throws SQLException;
+
+    List<User> sortByName() throws SQLException;
 }

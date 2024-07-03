@@ -63,5 +63,14 @@ public class UserService implements IUserService{
         }
     }
 
+    @Override
+    public List<User> sortByName() {
+        try {
+            return userRepo.sortByName();
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
 
 }

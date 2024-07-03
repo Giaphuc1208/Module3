@@ -109,6 +109,27 @@ public class UserRepo implements IUserRepo{
             users.add(user);
         }
         return users;
-
     }
+
+    @Override
+    public List<User> sortByName() throws SQLException {
+        List<User> users = new ArrayList<>();
+        Connection connection = new ConnectDB().getConnection();
+        String sql = "select * from users order by name";
+        PreparedStatement ps = connection.prepareStatement(sql);
+        ResultSet rs = ps.executeQuery();
+        while (rs.next()){
+            User user = new User();
+            int id = rs.getInt("id");
+            String name = rs.getString("name");
+            String email = rs.getString("email");
+            String country = rs.getString("country");
+            user.setId(id);
+            user.setName(name);
+            user.setEmail(email);
+            user.setCountry(country);
+            users.add(user);
+        }
+        return users;
+     }
 }
